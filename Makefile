@@ -13,3 +13,6 @@ jar:
 
 versioncheck:
 	./gradlew dependencyUpdates
+
+logs:
+	heroku logs --tail
