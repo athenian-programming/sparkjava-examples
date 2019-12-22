@@ -10,8 +10,9 @@ public class HttpServer {
     public static void main(String[] args) {
 
         final Logger logger = LoggerFactory.getLogger(HttpServer.class);
+        final String envvar = System.getenv("PORT");
 
-        port(8080);
+        port((envvar == null) ? 8080 : Integer.parseInt(envvar));
 
         staticFiles.location("/public");
 

@@ -8,5 +8,8 @@ compile:
 
 build: compile
 
+jar:
+	./gradlew serverJar
+
 versioncheck:
 	./gradlew dependencyUpdates
